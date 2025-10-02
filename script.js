@@ -303,12 +303,9 @@ function reveal() {
     w = 255;h = 155;
   }
 
-  var ifrm = document.createElement("iframe");
-ifrm.setAttribute("src", "https://www.youtube.com/embed/yh1NS5R-shA?list=RDenh1NS5R-shA&autoplay=1&loop=1&controls=0&mute=1");
-
-  //ifrm.style.width = `${w}px`;
-  //ifrm.style.height = `${h}px`;
-  //ifrm.allow = "autoplay"
-  ifrm.style.border = 'none';
+var ifrm = document.createElement("iframe");
+ifrm.setAttribute("src", "https://www.youtube.com/embed/11hywlTbOkw?autoplay=1&loop=1&controls=0&mute=1&playlist=11hywlTbOkw");
+ifrm.setAttribute("allow", "autoplay; encrypted-media");
+ifrm.style.border = 'none';
   document.querySelector('#video').appendChild(ifrm);
 }
