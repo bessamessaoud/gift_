@@ -304,7 +304,7 @@ function reveal() {
   }
 
 var ifrm = document.createElement("iframe");
-ifrm.setAttribute("src", "https://www.youtube.com/watch?v=11hywlTbOkw&list=RD11hywlTbOkw&start_radio=1");
+ifrm.setAttribute("src", "https://youtu.be/11hywlTbOkw");
 ifrm.setAttribute("allow", "autoplay; encrypted-media");
 ifrm.style.border = 'none';
   document.querySelector('#video').appendChild(ifrm);
