@@ -303,13 +303,16 @@ function reveal() {
     w = 255;h = 155;
   }
 
-var ifrm = document.createElement("iframe");
-ifrm.setAttribute("src", "https://www.youtube.com/embed/151IbT6ucO4?autoplay=1&loop=1&controls=0&mute=1&playlist=151IbT6ucO4");
-ifrm.setAttribute("width", "560");
-ifrm.setAttribute("height", "315");
-ifrm.setAttribute("frameborder", "0");
-ifrm.setAttribute("allow", "autoplay; encrypted-media");
-ifrm.setAttribute("allowfullscreen", "");
-ifrm.style.border = 'none';
-document.querySelector('#video').appendChild(ifrm);
+document.addEventListener('DOMContentLoaded', function() {
+  var videoContainer = document.getElementById('video');
+  videoContainer.innerHTML = `
+    <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/151IbT6ucO4?autoplay=1&loop=1&controls=0&mute=1&playlist=151IbT6ucO4" 
+      frameborder="0" 
+      allow="autoplay; encrypted-media" 
+      allowfullscreen>
+    </iframe>
+  `;
 }
