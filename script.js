@@ -303,16 +303,20 @@ function reveal() {
     w = 255;h = 155;
   }
 
-document.addEventListener('DOMContentLoaded', function() {
-  var videoContainer = document.getElementById('video');
-  videoContainer.innerHTML = `
-    <iframe 
-      width="560" 
-      height="315" 
-      src="https://www.youtube.com/embed/151IbT6ucO4?autoplay=1&loop=1&controls=0&mute=1&playlist=151IbT6ucO4" 
-      frameborder="0" 
-      allow="autoplay; encrypted-media" 
-      allowfullscreen>
-    </iframe>
-  `;
+const iframe = document.createElement("iframe");
+
+iframe.width = "560";
+iframe.height = "315";
+iframe.src = "https://www.youtube.com/embed/AJQC3D9WsI0?si=dDr2M6co6ZAYUdyG";
+iframe.title = "YouTube video player";
+iframe.frameBorder = "0";
+iframe.allow =
+  "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+iframe.referrerPolicy = "strict-origin-when-cross-origin";
+iframe.allowFullscreen = true;
+
+// ✅ Make sure there's an element with id="video" in your HTML
+document.getElementById("video").appendChild(iframe);
+
+
 }
